@@ -16,7 +16,7 @@ export const Inicio = () => {
   const [actividadOrPuntoInteres, setActividadOrPuntoInteres] = useState();
 
   const scrollBuscadorRef = useRef(null);
-  const isInView = useInView(scrollBuscadorRef, { once: true });
+  const isInView = useInView(scrollBuscadorRef, { once: false });
   const mainControladorFlecha = useAnimation();
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export const Inicio = () => {
     isInView
       ? mainControladorFlecha.start("invisible")
       : mainControladorFlecha.start("visible");
-  }, [scrollBuscadorRef]);
+  }, [isInView]);
 
   const paginacionScrollHome = () => {
     moveToSearchBar.current.scrollIntoView({ behavior: "smooth" });
