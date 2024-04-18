@@ -16,7 +16,7 @@ export const Inicio = () => {
   const [actividadOrPuntoInteres, setActividadOrPuntoInteres] = useState();
 
   const scrollBuscadorRef = useRef(null);
-  const isInView = useInView(scrollBuscadorRef, { once: false });
+  const isInView = useInView(scrollBuscadorRef, { once: true });
   const mainControladorFlecha = useAnimation();
 
   useEffect(() => {
