@@ -19,16 +19,16 @@ export const Inicio = () => {
     //   .then((hotTrends) => setHotTrends(hotTrends))
     //   .catch((error) => console.log(error));
 
-    fetch(url + `puntos_interes`)
-      .then((res) => res.json())
-      .then((puntosInteres) =>
-        setActividadOrPuntoInteres(
-          puntosInteres?.map((e) => {
-            return { ...e, queEs: "puntosInteres" };
-          })
-        )
-      )
-      .catch((error) => console.log(error));
+    //fetch(url + `puntos_interes`)
+      //.then((res) => res.json())
+      //.then((puntosInteres) =>
+        //setActividadOrPuntoInteres(
+          //puntosInteres?.map((e) => {
+            //return { ...e, queEs: "puntosInteres" };
+          //})
+        //)
+      //)
+      //.catch((error) => console.log(error));
   }, []);
 
   const paginacionScrollHome = () => {
@@ -45,14 +45,10 @@ export const Inicio = () => {
         <SearchBar moveToSearchBar={moveToSearchBar} />
       </div>
       <div className="w-10/12 mx-auto">
-        <CardBox hotTrends={hotTrends} />
+        
       </div>
       <div className="pt-10 md:w-[89%] lg:w-[87%] xl:w-[87%] 2xl:w-[85%] w-10/12 mx-auto relative">
-        <SliderItems
-          url={url}
-          setActividadOrPuntoInteres={setActividadOrPuntoInteres}
-          actividadOrPuntoInteres={actividadOrPuntoInteres}
-        />
+        
       </div>
       //<Mapa/>
       <Footer />
