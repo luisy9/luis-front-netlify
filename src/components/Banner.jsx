@@ -31,10 +31,10 @@ export const Banner = ({
     <motion.div
       style={{ backgroundImage }}
       className="relative grid min-h-screen place-items-center overflow-hidden
-       bg-gray-950 px-2 py-24 text-gray-200"
+       bg-gray-950 px-2 py-13 xm:py-24 text-gray-200"
     >
       <div className="z-10 flex flex-col items-center w-10/12 lg:w-11/12 mx-auto h-full relative">
-        <div className="flex xp:w-96 md:w-full ">
+        <div className="flex xp:w-96 md:w-full">
           <h1
             className="w-full text-center bg-gradient-to-br from-black to-slate-300
             bg-clip-text xs:text-[2.30rem] xs:tracking-wide xs:text-pretty
@@ -48,7 +48,7 @@ export const Banner = ({
             Toda la belleza de Cataluña en un solo clic
           </h1>
         </div>
-        <div className="pt-8">
+        <div className="pt-3 xm:pt-8">
           <DescripcionBanner />
         </div>
         {isVisible === true ? (
