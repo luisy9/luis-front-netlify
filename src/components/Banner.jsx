@@ -52,7 +52,7 @@ export const Banner = ({
           <DescripcionBanner />
         </div>
         <div className="w-full h-full">
-          <div className="sticky flex w-full h-full justify-center items-end cursor-pointer">
+          <div className="flex w-full h-full justify-center items-end cursor-pointer">
             {isVisible && <Flecha  />}
           </div>
         </div>
