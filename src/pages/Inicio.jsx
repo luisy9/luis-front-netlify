@@ -38,7 +38,7 @@ export const Inicio = () => {
 
   useEffect(() => {
     console.log(scrollBuscadorRef)
-  }, [isInView]);
+  }, [scrollBuscadorRef.current]);
 
   const paginacionScrollHome = () => {
     moveToSearchBar.current.scrollIntoView({ behavior: "smooth" });
