@@ -37,7 +37,9 @@ export const Inicio = () => {
   }, []);
 
   useEffect(() => {
-    isInView === true ? mainControladorFlecha.start("invisible") : mainControladorFlecha.start('visible')
+    isInView === true
+      ? mainControladorFlecha.start("visible")
+      : mainControladorFlecha.start("invisible");
   }, [isInView]);
 
   const paginacionScrollHome = () => {
@@ -49,11 +51,12 @@ export const Inicio = () => {
       <NavBar />
       <div className="w-full">
         <h1 className="text-5xl">dasdas</h1>
-        <Banner
-          paginacionScrollHome={paginacionScrollHome}
-          mainControladorFlecha={mainControladorFlecha}
-          ref={scrollBuscadorRef}
-        />
+        <div className="" ref={scrollBuscadorRef}>
+          <Banner
+            paginacionScrollHome={paginacionScrollHome}
+            mainControladorFlecha={mainControladorFlecha}
+          />
+        </div>
       </div>
       <div className="">
         <div
