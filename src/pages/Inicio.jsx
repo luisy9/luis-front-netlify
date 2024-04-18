@@ -15,9 +15,10 @@ export const Inicio = () => {
   const [hotTrends, setHotTrends] = useState([]);
   const [actividadOrPuntoInteres, setActividadOrPuntoInteres] = useState();
 
-  const scrollBuscadorRef = useRef(null);
-  const isInView = useInView(scrollBuscadorRef, { once: true });
+  const scrollBuscadorRef = useRef(false);
+  const isInView = useInView(scrollBuscadorRef);
   const mainControladorFlecha = useAnimation();
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // fetch(url + `puntos_interes/;/;/;`)
@@ -37,8 +38,10 @@ export const Inicio = () => {
   }, []);
 
   useEffect(() => {
-    console.log(isInView)
-  }, [scrollBuscadorRef.current]);
+    isInView
+      ? setIsVisible(false)
+      : setIsVisible(true);
+  }, [isInView]);
 
   const paginacionScrollHome = () => {
     moveToSearchBar.current.scrollIntoView({ behavior: "smooth" });
@@ -49,26 +52,27 @@ export const Inicio = () => {
       <NavBar />
       <div className="w-full">
         <h1 className="text-5xl">dasdas</h1>
-        <div className="" ref={scrollBuscadorRef}>
+        <div className="">
           <Banner
             paginacionScrollHome={paginacionScrollHome}
             mainControladorFlecha={mainControladorFlecha}
+            isVisible={isVisible}
           />
         </div>
       </div>
-      <div className="">
+      <div className="" ref={scrollBuscadorRef}>
         <div
           className="w-10/12 mx-auto hidden md:block"
           ref={isSearchBarComponent}
         >
           <SearchBar moveToSearchBar={moveToSearchBar} />
         </div>
-      </div>
 
-      <div className="w-10/12 mx-auto"></div>
-      <div className="pt-10 md:w-[89%] lg:w-[87%] xl:w-[87%] 2xl:w-[85%] w-10/12 mx-auto relative"></div>
-      <Mapa />
-      <Footer />
+        <div className="w-10/12 mx-auto"></div>
+        <div className="pt-10 md:w-[89%] lg:w-[87%] xl:w-[87%] 2xl:w-[85%] w-10/12 mx-auto relative"></div>
+        <Mapa />
+        <Footer />
+      </div>
     </div>
   );
 };
