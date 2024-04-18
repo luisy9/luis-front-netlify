@@ -6,8 +6,8 @@ export const Flecha = ({paginacionScrollHome}) => {
   const scale = useTransform(scrollYProgress, [0.1, 1], [1.2, 3]);
 
   useEffect(() => {
-    console.log(scrollYProgress);
-  }, [scrollYProgress]);
+    console.log(scale);
+  }, [scale]);
 
   return (
     <motion.div style={{ scale }} className="h-full border-none rounded-full p-2 cursor-pointer" 
