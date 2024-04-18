@@ -51,25 +51,27 @@ export const Banner = ({
         <div className="pt-3 xm:pt-8">
           <DescripcionBanner />
         </div>
-        <div className="sticky bottom-10 left-1/2 transform -translate-x-1/2">
-          <svg
-            width="25px"
-            height="25px"
-            stroke-width="1.5"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            color="#000000"
-          >
-            <path
-              d="M6 9L12 15L18 9"
-              stroke="#000000"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
+        <div className="w-full h-full">
+          <div className="sticky flex w-full h-full justify-center items-end cursor-pointer">
+            <svg
+              stroke-width="1"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              color="#000000"
+              className="w-16 animate-bounce"
+            >
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="#000000"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </div>
         </div>
+
         {/* {isVisible === true ? (
           <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-10">
             <Flecha
