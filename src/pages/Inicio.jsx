@@ -18,7 +18,7 @@ export const Inicio = () => {
   const scrollBuscadorRef = useRef(false);
   const isInView = useInView(scrollBuscadorRef);
   const mainControladorFlecha = useAnimation();
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     // fetch(url + `puntos_interes/;/;/;`)
@@ -38,9 +38,13 @@ export const Inicio = () => {
   }, []);
 
   useEffect(() => {
-    isInView
-      ? setIsVisible(false)
-      : setIsVisible(true);
+    isInView === true ? mainControladorFlecha.start({
+      opacity: 0
+    }) : mainControladorFlecha.start({
+      opacity: 1
+    })
+      // ? setIsVisible(false)
+      // : setIsVisible(true);
   }, [isInView]);
 
   const paginacionScrollHome = () => {
