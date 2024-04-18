@@ -10,6 +10,7 @@ export const Inicio = () => {
   let url = "http://localhost:3000/api/";
   //Seteamos el valor por defecto que sea null de useRef
   const moveToSearchBar = useRef(null);
+  const isSearchBarComponent = useRef(null);
   const [hotTrends, setHotTrends] = useState([]);
   const [actividadOrPuntoInteres, setActividadOrPuntoInteres] = useState();
 
@@ -29,7 +30,8 @@ export const Inicio = () => {
         //)
       //)
       //.catch((error) => console.log(error));
-  }, []);
+      console.log(isSearchBarComponent)
+  }, [isSearchBarComponent]);
 
   const paginacionScrollHome = () => {
     moveToSearchBar.current.scrollIntoView({ behavior: "smooth" });
@@ -41,7 +43,7 @@ export const Inicio = () => {
       <div className="w-full">
         <Banner paginacionScrollHome={paginacionScrollHome} />
       </div>
-      <div className="w-10/12 mx-auto hidden md:block">
+      <div className="w-10/12 mx-auto hidden md:block" ref={isSearchBarComponent}>
         <SearchBar moveToSearchBar={moveToSearchBar} />
       </div>
       <div className="w-10/12 mx-auto">
@@ -50,7 +52,7 @@ export const Inicio = () => {
       <div className="pt-10 md:w-[89%] lg:w-[87%] xl:w-[87%] 2xl:w-[85%] w-10/12 mx-auto relative">
         
       </div>
-      //<Mapa/>
+      <Mapa/>
       <Footer />
     </div>
   );
