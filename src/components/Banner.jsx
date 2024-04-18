@@ -32,7 +32,7 @@ export const Banner = ({ paginacionScrollHome }) => {
       <div className="z-10 flex flex-col items-center w-10/12 lg:w-11/12 mx-auto h-full relative">
         <div className="flex xp:w-96 md:w-full ">
           <h1
-            className="w-full text-center bg-gradient-to-br from-black to-slate-300
+            className="w-full text-center bg-gradient-to-br from-black to-red-300
             bg-clip-text xs:text-[2.30rem] xs:tracking-wide xs:text-pretty
             xm:text-5xl
             leading-tight 
