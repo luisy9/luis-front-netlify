@@ -37,8 +37,7 @@ export const Inicio = () => {
   }, []);
 
   useEffect(() => {
-    isInView === true
-      ? mainControladorFlecha.start("visible") : mainControladorFlecha.start('invisible')
+    isInView === true ? mainControladorFlecha.start("invisible") : mainControladorFlecha.start('visible')
   }, [isInView]);
 
   const paginacionScrollHome = () => {
