@@ -1,7 +1,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect } from "react";
 
-export const Flecha = ({paginacionScrollHome}) => {
+export const Flecha = ({ paginacionScrollHome, mainControladorFlecha }) => {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0.1, 1], [1.2, 3]);
 
@@ -10,8 +10,17 @@ export const Flecha = ({paginacionScrollHome}) => {
   }, [scale]);
 
   return (
-    <motion.div style={{ scale }} className="h-full border-none rounded-full p-2 cursor-pointer" 
-    onClick={paginacionScrollHome}>
+    <motion.div
+      style={{ scale }}
+      className="h-full border-none rounded-full p-2 cursor-pointer"
+      animate={mainControladorFlecha}
+      variants={{
+        visible: { opacity: 1 },
+        invisible: { opacity: 0 },
+      }}
+      transition={{ duration: 0.5 }}
+      onClick={paginacionScrollHome}
+    >
       <div className="flex justify-center items-end h-full">
         <svg
           viewBox="0 0 24 24"
