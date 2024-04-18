@@ -59,7 +59,6 @@ export const Inicio = () => {
     <div className="">
       <NavBar />
       <div className="w-full">
-        <h1 className="text-5xl">dasdas</h1>
         <div className="">
           <Banner
             paginacionScrollHome={paginacionScrollHome}
