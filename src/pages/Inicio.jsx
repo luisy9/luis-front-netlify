@@ -37,7 +37,7 @@ export const Inicio = () => {
   }, []);
 
   useEffect(() => {
-    console.log(scrollBuscadorRef)
+    console.log(isInView)
   }, [scrollBuscadorRef.current]);
 
   const paginacionScrollHome = () => {
