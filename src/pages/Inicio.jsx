@@ -39,16 +39,16 @@ export const Inicio = () => {
 
   useEffect(() => {
     isInView === true
-      ? mainControladorFlecha.start({
-          opacity: 0,
-          transitionDuration: 0,
-        })
-      : mainControladorFlecha.start({
-          opacity: 1,
-          transitionDuration: 0,
-        });
-    // ? setIsVisible(false)
-    // : setIsVisible(true);
+      // ? mainControladorFlecha.start({
+      //     opacity: 0,
+      //     transitionDuration: 0,
+      //   })
+      // : mainControladorFlecha.start({
+      //     opacity: 1,
+      //     transitionDuration: 0,
+      //   });
+    ? setIsVisible(false)
+    : setIsVisible(true);
   }, [isInView]);
 
   const paginacionScrollHome = () => {
