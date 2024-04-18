@@ -47,9 +47,13 @@ export const Banner = ({ paginacionScrollHome }) => {
         <div className="pt-8">
           <DescripcionBanner />
         </div>
-        <div className="h-screen absolute bottom-10 lg:absolute lg:bottom-80 xl:absolute xl:bottom-29 2xl:absolute 2xl:bottom-80">
+        <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-10">
           <Flecha paginacionScrollHome={paginacionScrollHome} />
         </div>
+
+        {/* <div className="h-screen absolute bottom-10 lg:absolute lg:bottom-80 xl:absolute xl:bottom-29 2xl:absolute 2xl:bottom-80">
+          <Flecha paginacionScrollHome={paginacionScrollHome} />
+        </div> */}
       </div>
     </motion.div>
   );
