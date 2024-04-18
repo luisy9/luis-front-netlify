@@ -30,7 +30,7 @@ export const Inicio = () => {
         //)
       //)
       //.catch((error) => console.log(error));
-      console.log(isSearchBarComponent)
+      console.log(isSearchBarComponent.current)
   }, [isSearchBarComponent]);
 
   const paginacionScrollHome = () => {
