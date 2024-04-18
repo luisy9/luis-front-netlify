@@ -49,6 +49,7 @@ export const Inicio = () => {
     <div className="">
       <NavBar />
       <div className="w-full">
+        dasdas
         <Banner
           paginacionScrollHome={paginacionScrollHome}
           mainControladorFlecha={mainControladorFlecha}
