@@ -38,10 +38,10 @@ export const Inicio = () => {
 
   useEffect(() => {
     console.log(isInView);
-    if (isInView) {
-      mainControladorFlecha.start("invisible");
-    }
-  }, [isInView]);
+    isInView
+      ? mainControladorFlecha.start("invisible")
+      : mainControladorFlecha.start("visible");
+  }, [scrollBuscadorRef]);
 
   const paginacionScrollHome = () => {
     moveToSearchBar.current.scrollIntoView({ behavior: "smooth" });
