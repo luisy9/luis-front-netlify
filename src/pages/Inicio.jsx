@@ -14,7 +14,7 @@ export const Inicio = () => {
   const isSearchBarComponent = useRef(null);
   const [hotTrends, setHotTrends] = useState([]);
   const [actividadOrPuntoInteres, setActividadOrPuntoInteres] = useState();
-  
+
   const scrollBuscadorRef = useRef(null);
   const isInView = useInView(scrollBuscadorRef, { once: true });
   const mainControladorFlecha = useAnimation();
@@ -55,7 +55,7 @@ export const Inicio = () => {
           mainControladorFlecha={mainControladorFlecha}
         />
       </div>
-      <div className="" ref={ref}>
+      <div className="" ref={scrollBuscadorRef}>
         <div
           className="w-10/12 mx-auto hidden md:block"
           ref={isSearchBarComponent}
