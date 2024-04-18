@@ -14,7 +14,9 @@ export const Inicio = () => {
   const isSearchBarComponent = useRef(null);
   const [hotTrends, setHotTrends] = useState([]);
   const [actividadOrPuntoInteres, setActividadOrPuntoInteres] = useState();
-  const isInView = useInView(ref, { once: true });
+  
+  const scrollBuscadorRef = useRef(null);
+  const isInView = useInView(scrollBuscadorRef, { once: true });
   const mainControladorFlecha = useAnimation();
 
   useEffect(() => {
