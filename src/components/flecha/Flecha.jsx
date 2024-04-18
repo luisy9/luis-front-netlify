@@ -18,7 +18,7 @@ export const Flecha = ({ paginacionScrollHome, mainControladorFlecha }) => {
         visible: { opacity: 1 },
         invisible: { opacity: 0 },
       }}
-      transition={{ duration: 0.2 }}
+      transition={{ duration: 0.5 }}
       onClick={paginacionScrollHome}
     >
       <div className="flex justify-center items-end h-full">

@@ -37,8 +37,7 @@ export const Inicio = () => {
   }, []);
 
   useEffect(() => {
-    console.log(isInView);
-    isInView
+    isInView === true
       ? mainControladorFlecha.start("visible") : mainControladorFlecha.start('invisible')
   }, [isInView]);
 
