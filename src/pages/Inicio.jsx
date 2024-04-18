@@ -39,8 +39,7 @@ export const Inicio = () => {
   useEffect(() => {
     console.log(isInView);
     isInView
-      ? mainControladorFlecha.start("invisible")
-      : mainControladorFlecha.start("visible");
+      ? mainControladorFlecha.start("visible") : mainControladorFlecha.start('invisible')
   }, [isInView]);
 
   const paginacionScrollHome = () => {
@@ -54,9 +53,10 @@ export const Inicio = () => {
         <Banner
           paginacionScrollHome={paginacionScrollHome}
           mainControladorFlecha={mainControladorFlecha}
+          ref={scrollBuscadorRef}
         />
       </div>
-      <div className="" ref={scrollBuscadorRef}>
+      <div className="">
         <div
           className="w-10/12 mx-auto hidden md:block"
           ref={isSearchBarComponent}
