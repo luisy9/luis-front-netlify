@@ -47,7 +47,7 @@ export const Banner = ({ paginacionScrollHome }) => {
         <div className="pt-8">
           <DescripcionBanner />
         </div>
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-10">
           <Flecha paginacionScrollHome={paginacionScrollHome} />
         </div>
       </div>
