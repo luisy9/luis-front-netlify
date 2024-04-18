@@ -52,9 +52,12 @@ export const Banner = ({
           <DescripcionBanner />
         </div>
         <div className="w-full h-full">
-          <div className="flex w-full h-full justify-center items-end cursor-pointer">
-            {isVisible && <Flecha  />}
+          <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-10">
+            <Flecha paginacionScrollHome={paginacionScrollHome} />
           </div>
+          {/* <div className="flex w-full h-full justify-center items-end cursor-pointer"> */}
+          {/* <Flecha /> */}
+          {/* </div> */}
         </div>
       </div>
     </motion.div>
